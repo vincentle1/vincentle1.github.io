@@ -1,0 +1,251 @@
+
+
+/**************** Overall Body and Margins ****************/
+
+/*120 left and right, 80 top and bottom*/
+
+body {
+    font-family: "Open Sans", Sans-serif;
+}
+
+
+/**********************************************************/
+/**************** Navigation Bar ****************/
+
+nav {
+    display: flex;
+    color: white;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin: 0px;
+    justify-content: space-between;
+
+}
+
+nav a:visited, nav a:active, nav a:link{
+    color:white;
+
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+nav ul li a {
+
+    text-decoration: none;
+}
+
+nav ul li a:visited {
+    color: white;
+}
+
+#left-nav {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    margin-left: 120px;
+    padding: 0;
+}
+
+#left-nav li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#right-nav {
+    display: flex;
+    list-style: none;
+    margin-right: 120px;
+}
+
+#right-nav li {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#paw-print {
+    height: 52px;
+    width:  48px;
+    margin-right: 10px;
+}
+
+#muddy-paws {
+    font-weight: 700;
+    font-size: 24px;
+
+}
+
+#shopping-cart {
+    width: 45px;
+    height: 50px;
+}
+
+#cart-total {
+    display: flex;
+    justify-content: center;
+}
+
+#center-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#nav-search {
+    font-size: 24px;
+    height: 36px;
+    width: 400px;
+    background-color: black;
+    border-style: hidden;
+    border-bottom-style:groove;
+    color: white;
+}
+
+/************************************************/
+
+/***************Content*****************/
+#content {
+    margin: 50px 120px;
+}
+
+#left-right-columns {
+    display: flex;
+}
+
+.checked {
+    color: #c0ad00;
+    border-color: #B58D00;
+    border: 1px line;
+    
+}
+
+#right-column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    justify-content: flex-start;
+}
+
+#left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#add-to-cart {
+    font-size: 36px;
+    color: white;
+    text-decoration: none;
+    background-color: #284330;
+    width: 50%;
+    padding: 20px 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+h1 {
+    font-weight: 900px;
+    font-size: 36px;
+    margin-top: 0px;
+
+}
+
+#main-banner {
+    border-radius: 10px;
+    width: 529px;
+    height: 462px;
+    padding-bottom: 0px;
+}
+
+#review-block {
+    display: block;
+}
+
+#review-section {
+    display: flex;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+li {
+    margin-top: 5px;
+}
+
+.review-name {
+    font-weight: bold;
+}
+
+.review-title {
+    font-weight: bold;
+    font-size: 36px;
+    margin-top: 60px;
+}
+
+h2 {
+    display: block;
+    font-size: 36px;
+}
+
+#review-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#review-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 60px;
+}
+
+#review-line {
+    border-bottom: 5px black;
+}
+
+/************************************************/
+
+/** Footer******************************/
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    background-color: black;
+    color: white;
+    position:static;
+    width:100%;
+}
+
+footer p {
+    margin: 20px 120px;
+    font-weight: bold;
+    font-size: 20px;
+}   
+
+#footer-container {
+    display:block;
+}
+
+#footer-attribution {
+    margin: 20px 120px;
+    font-size: 20px;
+
+}
+
+#footer-attribution a:visited, a:active, a:link {
+    color: white;
+}
+/***********************/
