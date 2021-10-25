@@ -19,7 +19,12 @@ title.textContent = "Medium Fetch GPS Tracker";
 
 
 function varCheck(){
-if (blue.checked == true && small.checked == true) {
+
+if (blue.checked == true) {
+    itemPicture.setAttribute("src", "assets/product-images/fetch-gps-blue.jpg");
+}
+
+else if (blue.checked == true && small.checked == true) {
     itemPicture.setAttribute("src", "assets/product-images/fetch-gps-blue.jpg");
 }
 else if (blue.checked == true && medium.checked == true) {
@@ -62,9 +67,10 @@ var addCart = document.getElementById("add-to-cart");
 var cart = document.getElementById("cart");
 var quantity = document.getElementById("quantity");
 
+var amountItem=quantity.value;
+
 
 function updateCartIcon(){
-    let amountItem = quantity.value;
     cart.innerHTML = "Cart" + " " + "(" + amountItem + ")";
 }
 
