@@ -135,12 +135,22 @@ h2 {
     font-size: 36px;
 }
 
-#item-name {
+.item-name {
     font-weight: 700;
     font-size: 36px;
 }
 
-#item-price {
+.item-size {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.item-color {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.item-price {
     font-weight: 400;
     font-size: 36px;
 }

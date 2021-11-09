@@ -1,5 +1,3 @@
-
-
 //Changing the size and color//
 
 var itemPicture = document.getElementById("main-banner");
@@ -15,9 +13,22 @@ var medium = document.getElementById("medium");
 const title = document.createElement('h1');
 title.textContent = "Medium Fetch GPS Tracker";
 
+//Initialize potentially empty cart and grab cart icon//
+
+const storedValue = JSON.parse(localStorage.getItem('savedCart'));
+const cart = storedValue ? storedValue : [];
+var cartIcon = document.getElementById("cart");
+
+//Define product object constructor//
+
+function Product(productName, productColor, productSize) {
+    this.name = productName;
+    this.color = productColor;
+    this.size = productSize;
+}
 
 
-
+//Alter picture on screen depending on which radio buttons are checked./////////////////////////////////////////
 function varCheck(){
 
 if (blue.checked == true) {
@@ -64,20 +75,69 @@ if (blue.checked == true) {
 //Adding items to cart//
 
 var addCart = document.getElementById("add-to-cart");
-var cart = document.getElementById("cart");
-var quantity = document.getElementById("quantity");
-
-var amountItem=quantity.value;
 
 
-function updateCartIcon(){
-    cart.innerHTML = "Cart" + " " + "(" + amountItem + ")";
+//Define adding to cart function//
+
+
+function addToCart(productName, productColor, productSize) {
+    var quantity = document.getElementById("quantity");
+    var amountItem=parseInt(quantity.value);
+    for (let i=0; i < amountItem; i++){
+        const item = new Product(productName, productColor, productSize);
+        cart.push(item);
+    }
+    localStorage.setItem('savedCart', JSON.stringify(cart));
 }
 
+////////////////////////////////////////////////////////////////
 
-addCart.addEventListener('click', updateCartIcon);
+var color = "";
+var size = "";
+
+//Check what color is checked and store it//
+
+
+addCart.addEventListener('click', function() {
+    if (blue.checked == true) {
+        color = "blue";
+    }
+    else if (gray.checked == true) {
+        color = "gray";
+    }
+    
+    //Check what size is checked and store that//
+    
+    if (small.checked == true) {
+        size = "small";
+    }
+    
+    else if (medium.checked == true) {
+        size = "medium";
+    }
+    
+    addToCart('Fetch GPS Tracker', color, size);
+
+})
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////
+
+//Update the look of the cart depending on cart length//
+
+
+
+cartIcon.innerHTML = "Cart" + " " + "(" + cart.length + ")";
+
+
+
+
+
+
+
+
+
 
 
 

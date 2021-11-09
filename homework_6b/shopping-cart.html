@@ -32,7 +32,7 @@
       <li>About</li>
       <div id="cart-total">
           <li><img id="shopping-cart" src="assets/general-all-images/shopping-cart.png"></li>
-          <li>Cart</li>
+          <li id="cart">Cart</li>
       </div>
       
   </ul>
@@ -40,12 +40,21 @@
 
 <div id="content">
 
+<h1>Your Cart</h1>
+
+<div id="cart-enclosed">
+<template id="cart-item-template">
+
+<div class="cart-item">
+
 <div id="col-1">
 
 <h1>Your Cart</h1>
 <img id="main-banner" src="assets/product-images/fetch-gps.jpg" alt="GPS main">
-<p id = "item-name">Fetch GPS Tracker</p>
-<p id = "item-price">$285.99</p>
+<p class = "item-name">Fetch GPS Tracker</p>
+<p class = "item-size"></p>
+<p class = "item-color"></p>
+<p class = "item-price">$285.99</p>
 
 </div>
 
@@ -53,10 +62,15 @@
 
 <h2>Quantity</h2>
 <span id="quantity-chunk">
-<input type="text" placeholder = 1>
+<input type="text" placeholder = 1 id="quantity">
 <button id="cancel">X</button>
 </span>
 
+</div>
+
+</div>
+
+</template>
 </div>
 
 <div id="col-3">
@@ -66,6 +80,8 @@
   </div>
 
 </div>
+
+
 
 
 
@@ -88,6 +104,7 @@
 
 </div>
   
-<script src="js/scripts.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/scriptsheet-cart.js"></script>
 </body>
 </html>
